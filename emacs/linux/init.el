@@ -68,6 +68,11 @@
 	  '(lambda()
 	     (auto-fill-mode 0)))
 
+
+;; 行番号の右に縦棒を入れる
+(setq linum-format "%4d\u2502")
+
+
 (require 'rainbow-delimiters)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
