@@ -1,0 +1,13 @@
+[user]
+	email = k.k4.bky@gmail.com
+	name = Katsumasa Kitajima
+[core]
+    editor = emacs
+[alias]
+    graph = log --decorate --all --graph
+    gr = log --decorate --all --graph
+    co = checkout
+    st = status
+    br = branch
+    cm = commit
+    
