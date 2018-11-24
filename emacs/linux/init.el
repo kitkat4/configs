@@ -22,8 +22,8 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(require 'tabbar)
-(tabbar-mode)
+;; (require 'tabbar)
+;; (tabbar-mode)
 
 (setq scroll-preserve-screen-position t)
 
@@ -73,13 +73,12 @@
 (setq linum-format "%4d\u2502")
 
 
-(require 'rainbow-delimiters)
+;; (require 'rainbow-delimiters)
+;; (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-(set-face-attribute 'default nil
-                    :family "Ricty"
-                    :height 128)
-(set-fontset-font
- nil 'japanese-jisx0208
- (font-spec :family "Ricty"))
+;; (set-face-attribute 'default nil
+;;                     :family "Ricty"
+;;                     :height 128)
+;; (set-fontset-font
+;;  nil 'japanese-jisx0208
+;;  (font-spec :family "Ricty"))
