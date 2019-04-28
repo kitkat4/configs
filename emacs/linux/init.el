@@ -72,6 +72,9 @@
 ;; 行番号の右に縦棒を入れる
 (setq linum-format "%4d\u2502")
 
+;; .h ファイルを C++ モードで開く
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 
 ;; (require 'rainbow-delimiters)
 ;; (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
