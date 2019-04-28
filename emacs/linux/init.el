@@ -46,7 +46,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset tab-width)
 
-
+;; 背景を半透明に
+(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
 
 (add-hook 'c++-mode-hook
 	  '(lambda()
