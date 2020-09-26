@@ -6,9 +6,9 @@
 
 (keyboard-translate ?\C-h ?\C-?)
 
-;; (require 'mozc)
-;; (set-language-environment "Japanese")
-;; (setq default-input-method "japanese-mozc")
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
 
 (prefer-coding-system 'utf-8)
 
@@ -76,9 +76,26 @@
 (add-hook 'haskell-mode-hook 'imenu-add-menubar-index)
 
 (custom-set-variables
- '(haskell-indent-after-keywords (quote (("where" 4 0) ("of" 4) ("do" 4) ("mdo" 4) ("rec" 4) ("in" 4 0) ("{" 4) "if" "then" "else" "let")))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(haskell-indent-after-keywords
+   (quote
+    (("where" 4 0)
+     ("of" 4)
+     ("do" 4)
+     ("mdo" 4)
+     ("rec" 4)
+     ("in" 4 0)
+     ("{" 4)
+     "if" "then" "else" "let")))
  '(haskell-indent-offset 4)
- '(haskell-indent-spaces 4))              
+ '(haskell-indent-spaces 4))
+
+;; ビープ音を消す
+(setq ring-bell-function 'ignore)
 
 
 ;; 行番号の右に縦棒を入れる
@@ -104,18 +121,13 @@
 ;; (set-fontset-font
 ;;  nil 'japanese-jisx0208
 ;;  (font-spec :family "Ricty"))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ricty" :foundry "PfEd" :slant normal :weight normal :height 102 :width normal)))))
+ '(default ((t (:family "Ricty" :foundry "PfEd" :slant normal :weight normal :height 143 :width normal)))))
 
 
 
