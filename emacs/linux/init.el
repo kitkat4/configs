@@ -47,7 +47,7 @@
 (setq-default c-basic-offset tab-width)
 
 ;; 背景を半透明に
-(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
 
 (add-hook 'c++-mode-hook
 	  '(lambda()
@@ -114,6 +114,10 @@
 
 
 (setq vhdl-basic-offset 4)
+
+;; Disable world completion with tab key
+(setq vhdl-intelligent-tab nil)
+
 ;; fix indenting so that code looks like this:
 ;;
 ;;   port (
