@@ -1,6 +1,6 @@
 (require 'package)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -92,7 +92,8 @@
      ("{" 4)
      "if" "then" "else" "let")))
  '(haskell-indent-offset 4)
- '(haskell-indent-spaces 4))
+ '(haskell-indent-spaces 4)
+ '(package-selected-packages (quote (rainbow-delimiters))))
 
 ;; ビープ音を消す
 (setq ring-bell-function 'ignore)
@@ -110,6 +111,25 @@
 ; gazebo world file highlighting
 (add-to-list 'auto-mode-alist '("\\.world$" . xml-mode))
 
+
+
+(setq vhdl-basic-offset 4)
+;; fix indenting so that code looks like this:
+;;
+;;   port (
+;;     input in : std_logic;
+;;   );
+;;
+;; instead of like this:
+;;
+;;   port (
+;;     input in : std_logic;
+;;     );
+;;
+(defun vhdl-mode-indent-fix ()
+  (vhdl-set-offset 'arglist-close '0)
+  )
+(add-hook 'vhdl-mode-hook 'vhdl-mode-indent-fix)
 
 
 ;; (require 'rainbow-delimiters)
