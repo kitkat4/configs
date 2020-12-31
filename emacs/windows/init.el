@@ -101,6 +101,7 @@
              ))
 
 
+(setq ring-bell-function 'ignore)
 
 ;; rainbow-delimiters を使うための設定
 ;(require 'rainbow-delimiters)
