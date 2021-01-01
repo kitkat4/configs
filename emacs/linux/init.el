@@ -135,6 +135,9 @@
   )
 (add-hook 'vhdl-mode-hook 'vhdl-mode-indent-fix)
 
+;; Not insert newline after inputing semicolon in verilog mode
+(setq verilog-auto-newline nil)
+
 
 ;; (require 'rainbow-delimiters)
 ;; (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)

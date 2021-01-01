@@ -103,6 +103,9 @@
 
 (setq ring-bell-function 'ignore)
 
+;; Not insert newline after inputing semicolon in verilog mode
+(setq verilog-auto-newline nil)
+
 ;; rainbow-delimiters を使うための設定
 ;(require 'rainbow-delimiters)
 ;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
