@@ -135,8 +135,24 @@
   )
 (add-hook 'vhdl-mode-hook 'vhdl-mode-indent-fix)
 
-;; Not insert newline after inputing semicolon in verilog mode
-(setq verilog-auto-newline nil)
+(custom-set-variables
+ '(verilog-align-ifelse t)
+ '(verilog-auto-delete-trailing-whitespace t)
+ '(verilog-auto-inst-param-value t)
+ '(verilog-auto-inst-vector nil)
+ '(verilog-auto-lineup (quote all))
+ '(verilog-auto-newline nil) ;; Not insert newline after inputing semicolon 
+ '(verilog-auto-save-policy nil)
+ '(verilog-auto-template-warn-unused t)
+ '(verilog-case-indent 4)
+ '(verilog-cexp-indent 4)
+ '(verilog-highlight-grouping-keywords t)
+ '(verilog-highlight-modules t)
+ '(verilog-indent-level 4)
+ '(verilog-indent-level-behavioral 4)
+ '(verilog-indent-level-declaration 4)
+ '(verilog-indent-level-module 4)
+ '(verilog-tab-to-comment nil))
 
 
 ;; (require 'rainbow-delimiters)
