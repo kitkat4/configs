@@ -104,7 +104,8 @@
 (setq ring-bell-function 'ignore)
 
 (custom-set-variables
- '(verilog-align-ifelse t)
+ '(verilog-align-ifelse nil)
+ ;; '(verilog-indent-begin-after-if t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
  '(verilog-auto-inst-vector nil)
@@ -113,12 +114,13 @@
  '(verilog-auto-save-policy nil)
  '(verilog-auto-template-warn-unused t)
  '(verilog-case-indent 4)
- '(verilog-cexp-indent 4)
+ '(verilog-cexp-indent 0)
  '(verilog-highlight-grouping-keywords t)
  '(verilog-highlight-modules t)
  '(verilog-indent-level 4)
  '(verilog-indent-level-behavioral 4)
  '(verilog-indent-level-declaration 4)
+ ;; '(verilog-indent-level-directive 4)
  '(verilog-indent-level-module 4)
  '(verilog-tab-to-comment nil))
 
