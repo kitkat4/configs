@@ -114,7 +114,7 @@
  '(verilog-auto-save-policy nil)
  '(verilog-auto-template-warn-unused t)
  '(verilog-case-indent 4)
- '(verilog-cexp-indent 0)
+ '(verilog-cexp-indent 4)
  '(verilog-highlight-grouping-keywords t)
  '(verilog-highlight-modules t)
  '(verilog-indent-level 4)
