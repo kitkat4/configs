@@ -581,17 +581,23 @@ jarring angry fruit salad look to reduce eye fatigue.")
  '(man-xref ((t (:underline t))))
  '(match ((t (:background "RoyalBlue3"))))
  '(minibuffer-prompt ((t (:foreground "cyan"))))
+ ;; '(mode-line ((t (:background "grey75" :foreground "Blue"
+ ;;                  :box '(:line-width -1 :style released-button)
+ ;;                  :height 0.9))))
  '(mode-line ((t (:background "grey75" :foreground "Blue"
-                  :box '(:line-width -1 :style released-button)
+                  :box t
                   :height 0.9))))
  '(mode-line-buffer-id ((t (:background "grey65" :foreground "red"
                                         :bold t :weight bold :height 0.9))))
- '(mode-line-emphasis ((t (:bold t :weight bold))))
- '(mode-line-highlight ((t (:box (:line-width 2 :color "grey40"
-                                              :style released-button :height 0.9)))))
+ ;; '(mode-line-emphasis ((t (:bold t :weight bold)))) '(mode-line-highlight ((t (:box (:line-width 2 :color "grey40" :style released-button :height 0.9)))))
+ '(mode-line-emphasis ((t (:bold t :weight bold)))) '(mode-line-highlight ((t (:box (:line-width 2 :color "grey40" :style released-button)))))
+ ;; '(mode-line-inactive ((t (:background "grey30" :foreground "grey80"
+ ;;                                       :box '(:line-width -1 :color "grey40")
+ ;;                                       :weight light :height 0.9))))
  '(mode-line-inactive ((t (:background "grey30" :foreground "grey80"
-                                       :box '(:line-width -1 :color "grey40")
+                                       :box t
                                        :weight light :height 0.9))))
+
  '(mouse ((t (:background "OrangeRed"))))
 
  '(next-error ((t (:background "blue3"))))
