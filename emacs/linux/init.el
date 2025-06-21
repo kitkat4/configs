@@ -14,7 +14,8 @@
 
 (setq truncate-lines t)
 
-(global-linum-mode t)
+;;(global-linum-mode t) ; deprecated
+(global-display-line-numbers-mode t)
 
 (line-number-mode t)
 (column-number-mode t)
@@ -82,18 +83,30 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(haskell-indent-after-keywords
-   (quote
-    (("where" 4 0)
-     ("of" 4)
-     ("do" 4)
-     ("mdo" 4)
-     ("rec" 4)
-     ("in" 4 0)
-     ("{" 4)
-     "if" "then" "else" "let")))
+   '(("where" 4 0) ("of" 4) ("do" 4) ("mdo" 4) ("rec" 4) ("in" 4 0)
+     ("{" 4) "if" "then" "else" "let"))
  '(haskell-indent-offset 4)
  '(haskell-indent-spaces 4)
- '(package-selected-packages (quote (rainbow-delimiters))))
+ '(package-selected-packages
+   '(cmake-mode csharp-mode cuda-mode markdown-mode mozc
+                rainbow-delimiters shader-mode))
+ '(verilog-align-ifelse nil)
+ '(verilog-auto-delete-trailing-whitespace t)
+ '(verilog-auto-inst-param-value t)
+ '(verilog-auto-inst-vector nil)
+ '(verilog-auto-lineup 'all)
+ '(verilog-auto-newline nil)
+ '(verilog-auto-save-policy nil)
+ '(verilog-auto-template-warn-unused t)
+ '(verilog-case-indent 4)
+ '(verilog-cexp-indent 0)
+ '(verilog-highlight-grouping-keywords t)
+ '(verilog-highlight-modules t)
+ '(verilog-indent-level 4)
+ '(verilog-indent-level-behavioral 4)
+ '(verilog-indent-level-declaration 4)
+ '(verilog-indent-level-module 4)
+ '(verilog-tab-to-comment nil))
 
 ;; ビープ音を消す
 (setq ring-bell-function 'ignore)
@@ -135,26 +148,7 @@
   )
 (add-hook 'vhdl-mode-hook 'vhdl-mode-indent-fix)
 
-(custom-set-variables
- '(verilog-align-ifelse nil)
- ;; '(verilog-indent-begin-after-if t)
- '(verilog-auto-delete-trailing-whitespace t)
- '(verilog-auto-inst-param-value t)
- '(verilog-auto-inst-vector nil)
- '(verilog-auto-lineup (quote all))
- '(verilog-auto-newline nil) ;; Not insert newline after inputing semicolon 
- '(verilog-auto-save-policy nil)
- '(verilog-auto-template-warn-unused t)
- '(verilog-case-indent 4)
- '(verilog-cexp-indent 0)
- '(verilog-highlight-grouping-keywords t)
- '(verilog-highlight-modules t)
- '(verilog-indent-level 4)
- '(verilog-indent-level-behavioral 4)
- '(verilog-indent-level-declaration 4)
- ;; '(verilog-indent-level-directive 4)
- '(verilog-indent-level-module 4)
- '(verilog-tab-to-comment nil))
+
 
 
 ;; (require 'rainbow-delimiters)
@@ -169,3 +163,9 @@
 
 
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
